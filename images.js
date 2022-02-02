@@ -17,7 +17,7 @@ for (let i = 0; i < 22; i++) {
             }
                 ipfsArray.push({
                 path: `images/${paddedHex}.png`,
-                content: data.toString("base64")     //buffer.from(data,"utf8").toString("base64") 
+                content: data.toString("base64")  //buffer.from(data,"utf8").toString("base64") 
             })
             res();
         })
