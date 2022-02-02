@@ -1,23 +1,24 @@
 let fs = require("fs");
 let axios = require("axios");
-var buffer = require('buffer/').Buffer;
+//var buffer = require('buffer/').Buffer;
 
 let ipfsArray = [];
 let promises = [];
 
 for (let i = 0; i < 22; i++) {
-    let paddedHex = ("0000000000000000000000000000000000000000000000000000000000000000" + i.toString(16)).substring("-64");
+    let paddedHex = ("0000000000000000000000000000000000000000000000000000000000000000" + i.toString(16)).substr("-64");
     
     promises.push(new Promise( (res, rej) => {
         fs.readFile(`${__dirname}/export/${paddedHex}.png`, (err, data) => {
             if(err) 
             {
                 console.log(err);
+                //console.log(i);
                 rej();
             }
                 ipfsArray.push({
                 path: `images/${paddedHex}.png`,
-                content: data.toString("base64")  //buffer.from(data,"utf8").toString("base64") 
+                content: data.toString("base64")
             })
             res();
         })
