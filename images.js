@@ -10,10 +10,14 @@ for (let i = 0; i < 22; i++) {
     
     promises.push(new Promise( (res, rej) => {
         fs.readFile(`${__dirname}/export/${paddedHex}.png`, (err, data) => {
-            if(err) rej();
-            ipfsArray.push({
+            if(err) 
+            {
+                console.log(err);
+                rej();
+            }
+                ipfsArray.push({
                 path: `images/${paddedHex}.png`,
-                content: data.toString("base64")//buffer.from(data,"utf8").toString("base64") 
+                content: data.toString("base64")     //buffer.from(data,"utf8").toString("base64") 
             })
             res();
         })
