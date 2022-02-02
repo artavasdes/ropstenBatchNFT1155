@@ -9,9 +9,18 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@nomiclabs/hardhat-waffle": "^2.0.2",
+    "@openzeppelin/contracts": "^4.4.2",
     "axios": "^0.25.0",
     "buffer": "^6.0.3",
+    "dotenv": "^15.0.0",
     "fs": "^0.0.1-security",
-    "tostring": "^0.0.1"
+    "hardhat": "^2.8.3",
+    "tostring": "^0.0.1",
+    "web3": "^1.7.0"
+  },
+  "devDependencies": {
+    "@nomiclabs/hardhat-ethers": "^2.0.4",
+    "ethers": "^5.0.0"
   }
 }
