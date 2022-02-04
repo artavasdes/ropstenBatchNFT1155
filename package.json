@@ -9,11 +9,12 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@alch/alchemy-web3": "^1.1.12",
     "@nomiclabs/hardhat-waffle": "^2.0.2",
     "@openzeppelin/contracts": "^4.4.2",
     "axios": "^0.25.0",
     "buffer": "^6.0.3",
-    "dotenv": "^15.0.0",
+    "dotenv": "^15.0.1",
     "fs": "^0.0.1-security",
     "hardhat": "^2.8.3",
     "tostring": "^0.0.1",
