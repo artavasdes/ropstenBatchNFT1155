@@ -10,21 +10,22 @@ contract Jamal is ERC1155 {
 
   constructor() public ERC1155("ipfs://QmQnb38U9BhQ2ySZ9CLLSHkPtC1Gkk6zXas7ZFfdFGcHiw/metadata/{id}.json") {
     for(uint256 i = 0; i<22; i++){
-      _mint(msg.sender, i , 1, "");
+      _mint(msg.sender, i, 1, "");
     }
   }
+
   
-  /*
   function uri(uint256 _tokenId) override public view returns (string memory){
     return string(
       abi.encodePacked(
+        //change depending on ipfs
         "https://gateway.pinata.cloud/ipfs/QmQSDKPgXxbYJH4J1psCKr1pypSozvwocnDkM5cezqkqNQ/",
         Strings.toString(_tokenId),
         ".json"
       )
     );
   }
-  */
+  
 
 
 }
