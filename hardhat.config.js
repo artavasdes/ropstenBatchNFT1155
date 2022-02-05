@@ -20,6 +20,7 @@ module.exports = {
 */
 
 //Mumbai(Polygon testnet)
+/*
 module.exports = {
    defaultNetwork: "matic",
    networks: {
@@ -40,5 +41,19 @@ module.exports = {
      }
    },
  }
+ */
+
+ //Rinkeby
+ module.exports = {
+  solidity: "0.8.0",
+  defaultNetwork: "rinkeby",
+  networks: {
+     hardhat: {},
+     rinkeby: {
+        url: API_URL,
+        accounts: [`0x${PRIVATE_KEY}`]
+     }
+  },
+}
 
 

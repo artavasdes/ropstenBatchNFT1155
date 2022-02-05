@@ -8,8 +8,8 @@ import "@openzeppelin/contracts/utils/math/SafeMath.sol";
 contract Jamal is ERC1155 {
   using SafeMath for uint256;
 
-  constructor() public ERC1155("ipfs://QmQnb38U9BhQ2ySZ9CLLSHkPtC1Gkk6zXas7ZFfdFGcHiw/metadata/{id}.json") {
-    for(uint256 i = 0; i<22; i++){
+  constructor() public ERC1155("ipfs://Qmc7HrvjHQZdNTuvg7JPcTpznVttmZ97LR5dJNtXQ7VUJ1/metadata/{id}.json") {
+    for(uint256 i = 0; i<24; i++){
       _mint(msg.sender, uint16(i), 1, "");
     }
   }

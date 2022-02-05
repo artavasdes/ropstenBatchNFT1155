@@ -3,12 +3,12 @@ let axios = require("axios");
 
 let ipfsArray = [];
 
-for (let i = 0; i < 22; i++) {
+for (let i = 0; i < 24; i++) {
     let paddedHex = ("0000000000000000000000000000000000000000000000000000000000000000" + i.toString(16)).substr("-64");
     ipfsArray.push({
         path: `metadata/${paddedHex}.json`,
         content: {
-            image: `ipfs://QmWWPjkbbfBT9N2G1GWwSRGGWBAkvab2wzLJxNo2XaDuUm/images/${paddedHex}.png`,
+            image: `ipfs://Qmf83g2AF7A7pcGfUL86zU433WXzXexLrNydNau8zmqMhw/images/${paddedHex}.png`,
             name: `Gender Sign #${i}`,
             description: "One of the infinite genders"
         }
