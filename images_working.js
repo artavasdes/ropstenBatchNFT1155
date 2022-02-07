@@ -14,6 +14,7 @@ const files = readdirSync(imageDirPath);
 let i = 0;
 files.forEach(file => {
     promises.push(new Promise( (res, rej) => {
+        console.log(file);
 
         if(path.extname(file) == '.png'){
             //maybe change paddedhex to 'file'
@@ -51,6 +52,9 @@ files.forEach(file => {
     }))
 } );
 
+console.log("After for each");
+//maybe upload to pinata
+
 Promise.all(promises).then( () => {
     axios.post("https://deep-index.moralis.io/api/v2/ipfs/uploadFolder", 
         ipfsArray,
@@ -68,4 +72,4 @@ Promise.all(promises).then( () => {
         console.log(error)
     })
 })
-
+console.log("After db");
