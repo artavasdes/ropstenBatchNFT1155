@@ -7,7 +7,7 @@ let promises = [];
 
 const { readdirSync, rename } = require('fs');
 const { resolve } = require('path');
-const imageDirPath = resolve(__dirname, 'exportMC');
+const imageDirPath = resolve(__dirname, 'exportTest');
 
 const files = readdirSync(imageDirPath);
 
@@ -18,7 +18,7 @@ files.forEach(file => {
 
         if(path.extname(file) == '.png'){
             //maybe change paddedhex to 'file'
-            fs.readFile(`${__dirname}/exportMC/${file}`, (err, data) => {
+            fs.readFile(`${__dirname}/exportTest/${file}`, (err, data) => {
                 if(err) 
                 {
                     console.log(err);
@@ -33,7 +33,7 @@ files.forEach(file => {
             })
         }
         else if(path.extname(file) == '.gif'){
-            fs.readFile(`${__dirname}/exportMC/${file}`, (err, data) => {
+            fs.readFile(`${__dirname}/exportTest/${file}`, (err, data) => {
                 if(err) 
                 {
                     console.log(err);

@@ -8,7 +8,7 @@ for (let i = 0; i < 24; i++) {
     ipfsArray.push({
         path: `metadata/${paddedHex}.json`,
         content: {
-            image: `ipfs://Qmf83g2AF7A7pcGfUL86zU433WXzXexLrNydNau8zmqMhw/images/${paddedHex}.png`,
+            image: `ipfs://QmeWPKpPBvKxrUzmniDvoLgrkkod1y3twjjcxTm33u1vRz/images/${paddedHex}.png`,
             name: `Gender Sign #${i}`,
             description: "One of the infinite genders"
         }

@@ -3,7 +3,7 @@ const path = require('path');
 const { resolve } = require('path');
 
 // Get path to image directory
-const imageDirPath = resolve(__dirname, 'exportMC');
+const imageDirPath = resolve(__dirname, 'exportTest');
 
 // Get an array of the files inside the folder
 const files = readdirSync(imageDirPath);
